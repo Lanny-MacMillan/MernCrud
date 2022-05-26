@@ -84,12 +84,16 @@ function App() {
       <div id='menu'>
       Menu of the generations best food
       </div>
-        <h3>Add a New Food to Our Menu</h3>
+      <div className='container'>
+      <div id='form'>
+        <h3 id='head'>Add a New Food to Our Menu</h3>
         <form onSubmit={handleFormSubmit}>
           <input type="text" placeholder="Name" onChange={handleNewName}/><br/>
           <input type="text" placeholder="Image URL" onChange={handleNewImage}/><br/>
           <input type="submit" value="Create New Food Listing"/>
         </form>
+      </div>
+      </div>
       </section>
     </div>
     <div className='container'>
