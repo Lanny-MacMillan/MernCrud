@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@200&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background:grey
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img {
+  width: 100%;
+  max-width: 520px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#menu {
+  font-size: 55px;
+  font-family: 'Gluten', cursive;
+  background: yellow;
+  margin-top: 0px;
+  padding: 10px;
+}
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-
-.App-link {
-  color: #61dafb;
+#food-div {
+  text-align: center;
+  width: 850px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  opacity: .95;
+  border-top-right-radius: 35px;
+  border-bottom-left-radius: 35px;
+  background: rgb(119, 212, 224);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section {
+  text-align: center;
+  margin: 10px;
+}
+form {
+  margin: 5px;
 }
