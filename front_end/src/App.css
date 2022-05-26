@@ -1,0 +1,30 @@
+body {
+  background:grey
+}
+img {
+  width: 100%;
+  max-width: 520px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#food-div {
+  text-align: center;
+  width: 850px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  opacity: .95;
+  border-top-right-radius: 35px;
+  border-bottom-left-radius: 35px;
+  background: rgb(119, 212, 224);
+}
+section {
+  text-align: center;
+  margin: 10px;
+}
+form {
+  margin: 5px;
+}
