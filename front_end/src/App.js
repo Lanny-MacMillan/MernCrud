@@ -81,7 +81,9 @@ function App() {
     <div>
       
       <section>
-      <h1>Menu</h1>
+      <div id='menu'>
+      Menu of the generations best food
+      </div>
         <h3>Add a New Food to Our Menu</h3>
         <form onSubmit={handleFormSubmit}>
           <input type="text" placeholder="Name" onChange={handleNewName}/><br/>
@@ -106,7 +108,8 @@ function App() {
     </>
   );
 }
-function Rnm () {
+// function thirdAPI () {
 
-}
+// }
+
 export default App;
