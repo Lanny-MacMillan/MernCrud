@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react';
 import axios from 'axios';
 import Foods from './components/Food'
 
+
 function App() {
   const [name, setName] = useState('')
   const [image, setImage] = useState('')
