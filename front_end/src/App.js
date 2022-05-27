@@ -7,6 +7,8 @@ import Foods from './components/Food'
 function App() {
   const [name, setName] = useState('')
   const [image, setImage] = useState('')
+  const [description, setDescription] = useState('')
+  const [showDescription, setShowDescription] = useState(false)
   const [food, setFood] = useState([])
 
   const handleNewName = (event) => {
@@ -17,6 +19,20 @@ function App() {
     // console.log(event.target.value)
     setImage(event.target.value)
   }
+  const handleNewDescription = (event) => {
+    // console.log(event.target.value)
+    setDescription(event.target.value)
+  }
+  const displayDescription = (event) => {
+    setShowDescription(true)
+  }
+  const ShowDescription = () => {
+    return (
+      <>
+      {showDescription ? <ShowDescription/> : ''}
+      </>
+    )
+  }
   const handleFormSubmit = (event) => {
     event.preventDefault();
     axios.post(
@@ -24,6 +40,7 @@ function App() {
       {
         name:name,
         image:image,
+        description:description,
       }//then request is so we dont have to reload page on submission
     ).then(()=>{
       axios
@@ -42,6 +59,7 @@ function App() {
           {
             name: name,
             image: image,
+            description:description,
           }
       )
       .then(() => {
@@ -90,6 +108,7 @@ function App() {
         <form onSubmit={handleFormSubmit}>
           <input type="text" placeholder="Name" onChange={handleNewName}/><br/>
           <input type="text" placeholder="Image URL" onChange={handleNewImage}/><br/>
+          <input type="text" placeholder="Description" onChange={handleNewDescription}/><br/>
           <input type="submit" value="Create New Food Listing"/>
         </form>
       </div>
@@ -101,10 +120,15 @@ function App() {
             return <Foods
           //  Props = Values
               food={food} 
+              description={description}
               removeFood={removeFood} 
               editFood={editFood}
               handleNewName={handleNewName}
               handleNewImage={handleNewImage}
+              handleNewDescription={handleNewDescription}
+              displayDescription={displayDescription}
+              showDescription={showDescription}
+              ShowDescription={ShowDescription}
               key={food._id}/>
           })}
     </div>
