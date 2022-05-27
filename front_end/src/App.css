@@ -8,6 +8,7 @@ body {
 img {
   width: 100%;
   max-width: 520px;
+  border: solid 1px;
 }
 #head {
   color: white;
@@ -20,6 +21,7 @@ img {
   background: yellow;
   margin-top: 0px;
   padding: 10px;
+  margin-bottom: 20px;
 }
 .container {
   display: flex;
@@ -29,7 +31,7 @@ img {
 }
 #food-div {
   text-align: center;
-  width: 850px;
+  width: 650px;
   border: 1px solid black;
   margin-bottom: 15px;
   opacity: .85;
@@ -40,7 +42,7 @@ img {
 #form {
   position: center;
   text-align: center;
-  width: 850px;
+  width: 650px;
   border: 1px solid black;
   margin-bottom: 15px;
   opacity: .95;
@@ -54,4 +56,14 @@ section {
 }
 form {
   margin: 5px;
+}
+input, button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px
+}
+h3, h4 {
+  color: white;
+  font-size:25px;
+  text-shadow: 2px 2px #5ba0b3;
 }
