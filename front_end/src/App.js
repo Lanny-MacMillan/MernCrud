@@ -26,13 +26,13 @@ function App() {
   const displayDescription = (event) => {
     setShowDescription(true)
   }
-  const ShowDescription = () => {
-    return (
-      <>
-      {showDescription ? <ShowDescription/> : ''}
-      </>
-    )
-  }
+  // const ShowDescription = () => {
+  //   return (
+  //     <>
+  //     {/* {showDescription ? <ShowDescription/> : ''} */}
+  //     </>
+  //   )
+  // }
   const handleFormSubmit = (event) => {
     event.preventDefault();
     axios.post(
@@ -128,7 +128,7 @@ function App() {
               handleNewDescription={handleNewDescription}
               displayDescription={displayDescription}
               showDescription={showDescription}
-              ShowDescription={ShowDescription}
+              // ShowDescription={ShowDescription}
               key={food._id}/>
           })}
     </div>
